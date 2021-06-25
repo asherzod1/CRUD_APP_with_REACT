@@ -13,8 +13,8 @@ function App() {
         <Switch>
           <Route path='/login' component={LoginPage} />
           <LayOut> 
-          <ProtectedRoute path='/student' component={StudentP}/>
-          <ProtectedRoute path='/tutor' component={TutorP} />
+            <ProtectedRoute path='/student' component={StudentP}/>
+            <ProtectedRoute path='/tutor' component={TutorP} />
           </LayOut>
         </Switch>
       </BrowserRouter>

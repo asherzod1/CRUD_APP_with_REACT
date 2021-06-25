@@ -7,7 +7,7 @@ const ProtectedRoute = (props) => {
         return <Route exact path={props.path} component={props.component} />
     }
     else {
-        <Redirect to="/login"></Redirect>
+        return <Redirect to="/login" />
     };
 }
 
