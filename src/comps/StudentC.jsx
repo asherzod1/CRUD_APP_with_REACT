@@ -99,14 +99,6 @@ const StudentC = () => {
         labelCol: { span: 8 },
         wrapperCol: { span: 16 },
       };
-      const validateMessages = {
-        types: {
-          number: '${label} is not a valid number!',
-        },
-        number: {
-          range: '${label} must be between ${min} and ${max}',
-        },
-      };
       const onFinish = (values) => {
         if(selectedRowKeys.length === 0){
             axios.post(API_URL + 'api/admin/student/save', values)
@@ -146,7 +138,7 @@ const StudentC = () => {
             </Row>
             <Table rowKey='id' rowSelection={rowSelection} columns={columns} dataSource={data} />
             <Modal title="Basic Modal" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-                <Form form={form} {...layout} name="nest-messages" onFinish={onFinish} onFinishFailed={onFinishFailed} validateMessages={validateMessages}>
+                <Form form={form} {...layout} name="nest-messages" onFinish={onFinish} onFinishFailed={onFinishFailed}>
                     <Form.Item name='fullname' label="FullName" rules={[{ required: true }]}>
                         <Input />
                     </Form.Item>

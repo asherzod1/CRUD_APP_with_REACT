@@ -1,10 +1,9 @@
 import React from 'react'
-import LayOut from '../comps/LayOut'
 import StudentC from '../comps/StudentC'
 const StudentP = () => {
     return (
         <div>
-                <StudentC />
+            <StudentC />
         </div>
     )
 }
